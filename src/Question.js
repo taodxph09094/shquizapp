@@ -46,7 +46,7 @@ const Question = ({navigation, route}) => {
       </View>
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <View style={styles.question}>
-          <Text style={{color: '#5B1CAE', fontSize: 35, fontWeight: 'bold'}}>
+          <Text style={{color: '#5B1CAE', fontSize: 25, fontWeight: 'bold', maxWidth: 340}}>
             {selectedItem?.title}
           </Text>
         </View>
@@ -92,8 +92,8 @@ const styles = StyleSheet.create({
     left: 45,
   },
   question: {
-    minWidth: 300,
-    height: 120,
+    maxWidth: 400,
+    minHeight: 120,
     backgroundColor: '#fff',
     borderRadius: 20,
     transform: [{translateY: 40}],

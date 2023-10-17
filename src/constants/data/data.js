@@ -65,4 +65,37 @@ export const data = [
     ],
     locked: true
   },
+  {
+    index: 7,
+    title: 'Sơn Tùng M-tp là ca sĩ thuộc quốc gia nào ?',
+    isCorrect: 3,
+    correct: [
+      {key: 1, value: 'Hàn Quốc'},
+      {key: 2, value: 'Thái Lan'},
+      {key: 3, value: 'Việt Nam'},
+    ],
+    locked: true
+  },
+  {
+    index: 8,
+    title: 'Con vật nào được người nuôi gọi là hoàng thượng ?',
+    isCorrect: 3,
+    correct: [
+      {key: 1, value: 'Chó'},
+      {key: 2, value: 'Cá'},
+      {key: 3, value: 'Mèo'},
+    ],
+    locked: true
+  },
+  {
+    index: 9,
+    title: 'Em trai của Sơn Tùng M-tp tên là gì ?',
+    isCorrect: 1,
+    correct: [
+      {key: 1, value: 'Mono'},
+      {key: 2, value: 'Thiều Bảo Trâm'},
+      {key: 3, value: 'Jack (J97)'},
+    ],
+    locked: true
+  },
 ];
