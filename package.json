@@ -13,6 +13,7 @@
     "@react-navigation/native": "^6.1.8",
     "@react-navigation/native-stack": "^6.9.14",
     "@reduxjs/toolkit": "^1.9.7",
+    "axios": "^1.5.1",
     "react": "18.0.0",
     "react-native": "0.69.12",
     "react-native-exit-app": "^2.0.0",
